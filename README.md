@@ -22,4 +22,4 @@ UI/UX IMPROVMENTS:
 
 4. Add more space between elements
 
-5. Follow the consistency design rules (Images from the store section have rounded borders while the images from the news dont't.)
+5. Follow the consistency design rules (Images from the store section have rounded borders while the images from the news don't.)
