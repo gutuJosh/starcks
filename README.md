@@ -18,8 +18,8 @@ UI/UX IMPROVMENTS:
 
 2. Increase font size and line height;
 
-3. Add effective call to action buttons;
+3. Add effective call to action buttons in the "store" page (each item could have a "Buy now" button)
 
-4. Add more space between elements
+4. The actual shade of red is not visible on a dark background (see Exchange section)
 
-5. Follow the consistency design rules (Images from the store section have rounded borders while the images from the news don't.)
+5. Follow the consistency design rules (The form fields in the "registration page" have rectangle borders while the submit button and login button have rounded borders.)
