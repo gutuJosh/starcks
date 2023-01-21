@@ -51,7 +51,7 @@ function Player({ playersData, playerDetails }) {
   useEffect(() => {
     //after component was rendered:
 
-    //update the store so the <Header/> component will have access to playersData
+    //update the store so the <PlayerSelector/> component will have access to playersData
     if(playersData){
       dispatch({
         type: "SET_PLAYERS",
