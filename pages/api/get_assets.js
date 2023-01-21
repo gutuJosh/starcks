@@ -1,10 +1,14 @@
 import { backend } from "../../config/app";
 import axios from "axios";
 
+/**
+ * @returns {Promise<Object>}
+ */
+
 export default async function handler(req, res) {
 
 
-  let url = `${backend}/exchange/assets`;
+  const url = `${backend}/exchange/assets`;
 
   const result = await axios.get(url);
 

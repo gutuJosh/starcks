@@ -20,19 +20,21 @@ function Player({ playersData, playerDetails }) {
   
   useEffect(() => {
 
+    //after component was rendered:
 
+    //set loading status to false and exit
     if(loading){
        setLoading(false);
        return;
     }
       
-      
+    // get player details each time the router query change 
     async function getDetails(){
 
       const { id }  = router.query;
       let url = `/api/get_player_data?id=${encodeURIComponent(id)}`;
       
-      const query = await axios.get(url);
+      const query = id ? await axios.get(url) : false;
     
       if (query) {
        setPlayer(query.data);
@@ -47,7 +49,9 @@ function Player({ playersData, playerDetails }) {
 
 
   useEffect(() => {
+    //after component was rendered:
 
+    //update the store so the <Header/> component will have access to playersData
     if(playersData){
       dispatch({
         type: "SET_PLAYERS",
@@ -55,6 +59,7 @@ function Player({ playersData, playerDetails }) {
       });
     }
 
+   //call for assets data only once
    if(!assets){
       axios.get(`/api/get_assets`)
       .then(response => setAssets(response.data))
