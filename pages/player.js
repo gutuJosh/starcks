@@ -55,7 +55,7 @@ function Player({ playersData, playerDetails }) {
       });
     }
 
-   if(Object.keys(assets).length === 0){
+   if(!assets){
       axios.get(`/api/get_assets`)
       .then(response => setAssets(response.data))
       .catch((err) => {
