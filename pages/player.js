@@ -20,22 +20,11 @@ function Player({ playersData, playerDetails }) {
   
   useEffect(() => {
 
-    if(playersData){
-      dispatch({
-        type: "SET_PLAYERS",
-        payload: playersData,
-      });
-    }
-
- 
 
     if(loading){
        setLoading(false);
        return;
     }
-
-
-   
       
       
     async function getDetails(){
@@ -58,6 +47,13 @@ function Player({ playersData, playerDetails }) {
 
 
   useEffect(() => {
+
+    if(playersData){
+      dispatch({
+        type: "SET_PLAYERS",
+        payload: playersData,
+      });
+    }
 
    if(Object.keys(assets).length === 0){
       axios.get(`/api/get_assets`)
