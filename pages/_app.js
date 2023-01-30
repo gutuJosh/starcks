@@ -1,13 +1,12 @@
 import "../styles/reset.css";
 import "../styles/globals.css";
-import { AppContextProvider } from "../context/AppContextProvider";
-
+import store from "../store";
+import { Provider } from "react-redux";
 
 export default function App({ Component, pageProps }) {
   return (
-  	   <AppContextProvider>
-          <Component {...pageProps} />
-       </AppContextProvider>
-
-       );
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
